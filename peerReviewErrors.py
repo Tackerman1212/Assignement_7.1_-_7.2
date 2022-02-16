@@ -74,12 +74,15 @@ def checkCave(chooseCave):
 playAgain = ''
 # ERROR #9: 'playAgain' should be initialized as an empty string with quotes, not set to 'yes' which will pass through the while statement automatically restarting the programm for the user.
 
-while playAgain = 'yes' or playAgain = 'y':
+#while playAgain = 'yes' or playAgain = 'y':
+while playAgain == 'yes or playAgain == 'y':
+# ERROR #10: changed "=" to "==" for comparison purposes.
+	
 	displayIntro()
 	
 	#caveNumber = choosecave()
 	caveNumber = chooseCave()
-	# ERROR #9: Case sensitive syntax error not matching the previously defined function of 'chooseCave'.
+	# ERROR #11: Case sensitive syntax error not matching the previously defined function of 'chooseCave'.
 	
 	checkCave(caveNumber)
     
@@ -88,5 +91,5 @@ while playAgain = 'yes' or playAgain = 'y':
 	if playAgain == "no":
 		#print("Thanks for planing")
 		print("Thanks for playing')
-		# ERROR #10: A typo 'planing' should be 'playing'.
+		# ERROR #12: A typo 'planing' should be 'playing'.
 
