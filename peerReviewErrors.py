@@ -59,7 +59,7 @@ def checkCave(chooseCave):
 	friendlyCave = random.randint(1, 2)
 
 	#if chosenCave == str(friendlyCave):
-	if chooseCave == int(friendlyCave): 
+	if chooseCave == str(friendlyCave): 
 	# ERROR #6: 'chosenCave' should be 'chooseCave' to match the previous function name. Also 'friendlyCave' wouldn't be a 'str' or string, it is an integer or 'int'.
 		
 		print('Gives you his treasure!')
