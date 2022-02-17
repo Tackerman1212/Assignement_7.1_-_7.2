@@ -19,9 +19,7 @@ def displayIntro():
 
 def chooseCave():	
 	
-   	# cave = ''
-	cave = 0
-	# ERROR #1: "cave" was being established as a string using quotes, it is intended to be set as an integer so initializing it to '0' is the fix. 
+	cave = ''
 	
 	# while cave != '1' and cave != '2':
 		#print('Which cave will you go into? (1 or 2)')
@@ -33,16 +31,16 @@ def chooseCave():
 		if cave == '1' or cave == '2':
 			break
 			
-	# ERROR #2 & #3: First was a logic error, I turned it to a while(True) statement with a "break", and the second error was changing "and" to "or". I also changed "!=" to "==" to fit the new logic. 
+	# ERROR #1 & #2: First was a logic error, I turned it to a while(True) statement with a "break", and the second error was changing "and" to "or". I also changed "!=" to "==" to fit the new logic. 
 
 	#return caves
 	return cave
-	# ERROR #4: 'caves' should not be plural, simple syntax error. Correct version is 'cave'.
+	# ERROR #3: 'caves' should not be plural, simple syntax error. Correct version is 'cave'.
 
 	
 # def checkCave(chosenCave):
 def checkCave(chooseCave):
-# ERROR #5: 'chosenCave' was given the past tense language, the syntax was incorrect by not matching the previously established function name of 'chooseCave'.
+# ERROR #4: 'chosenCave' was given the past tense language, the syntax was incorrect by not matching the previously established function name of 'chooseCave'.
 	
 	print('You approach the cave...')
 	#sleep for 2 seconds
@@ -52,7 +50,7 @@ def checkCave(chooseCave):
 	#sleep for 2 seconds
 	#time.sleep(3)
 	time.sleep(2)
-	# ERROR #6: '3' was entered incorrectly and was replaced with '2' which is correct according to the stated comments in the code.
+	# ERROR #5: '3' was entered incorrectly and was replaced with '2' which is correct according to the stated comments in the code.
 	
 	print('A large dragon jumps out in front of you! He opens his jaws and...')
 	print()
@@ -61,28 +59,27 @@ def checkCave(chooseCave):
 	friendlyCave = random.randint(1, 2)
 
 	#if chosenCave == str(friendlyCave):
-	if chosenCave == int(friendlyCave): 
-	# ERROR #7: 'friendlyCave' wouldn't be a string, it is an integer or 'int'.
+	if chooseCave == int(friendlyCave): 
+	# ERROR #6: 'chosenCave' should be 'chooseCave' to match the previous function name. Also 'friendlyCave' wouldn't be a 'str' or string, it is an integer or 'int'.
 		
 		print('Gives you his treasure!')
 	else:
 		#print 'Gobbles you down in one bite!'
 		print('Goobles you down in one bite!')
-		# ERROR #8 Parenthesis were forgotten on the print() function.
+		# ERROR #7 Parenthesis were forgotten on the print() function.
 
-#playAgain = 'yes'
-playAgain = ''
-# ERROR #9: 'playAgain' should be initialized as an empty string with quotes, not set to 'yes' which will pass through the while statement automatically restarting the programm for the user.
+
+playAgain = 'yes'
 
 #while playAgain = 'yes' or playAgain = 'y':
-while playAgain == 'yes or playAgain == 'y':
-# ERROR #10: changed "=" to "==" for comparison purposes.
+while playAgain == 'yes' or playAgain == 'y':
+# ERROR #8: changed "=" to "==" for comparison purposes.
 	
 	displayIntro()
 	
 	#caveNumber = choosecave()
 	caveNumber = chooseCave()
-	# ERROR #11: Case sensitive syntax error not matching the previously defined function of 'chooseCave'.
+	# ERROR #9: Case sensitive syntax error not matching the previously defined function of 'chooseCave'.
 	
 	checkCave(caveNumber)
     
@@ -90,6 +87,6 @@ while playAgain == 'yes or playAgain == 'y':
 	playAgain = input()
 	if playAgain == "no":
 		#print("Thanks for planing")
-		print("Thanks for playing')
-		# ERROR #12: A typo 'planing' should be 'playing'.
+		print("Thanks for playing")
+		# ERROR #10: A typo 'planing' should be 'playing'.
 
